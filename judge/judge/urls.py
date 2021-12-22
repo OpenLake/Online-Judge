@@ -30,8 +30,10 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-   path("", admin.site.urls),
-   path(
+    path("", admin.site.urls),
+    path("jet/", include("jet.urls", "jet")),
+    path("jet/dashboard/", include("jet.dashboard.urls", "jet-dashboard")),
+    path(
         "apidocs/",
         schema_view.with_ui("swagger", cache_timeout=0),
         name="schema-swagger-ui",
