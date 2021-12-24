@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+class Question(models.Model):
+    statement = models.TextField()
+    
+    class Meta:
+       verbose_name = "Question"
+       verbose_name_plural = "Questions"
+ 

@@ -1,4 +1,5 @@
 .env
 .idea
 *.pyc
-db.sqlite3
+judge/__pycache__/*
+
