@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'drf_yasg',
     "corsheaders",
+    "question",
 ]
 
 MIDDLEWARE = [
