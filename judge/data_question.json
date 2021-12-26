@@ -1,0 +1,18 @@
+[
+    {
+      "model": "question.Question",
+      "pk": 1,
+      "fields": {
+        "statement": "Given space seperated integers a and b. Print a-b in a new line"
+      }
+    },
+    {
+        "model": "question.Question",
+        "pk": 2,
+        "fields": {
+          "statement": "Given space seperated integers a and b. Print a*b in a new line"
+        }
+      }
+    
+]
+  
