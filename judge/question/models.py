@@ -17,12 +17,14 @@ class Test(models.Model):
     title = models.CharField(max_length=250)
     # input_file_<question_id>_<test_id>
     input_file = models.FilePathField(
-        path="test",
-        match="input_file*"
+        path="test_case",
+        match="input_file*",
+        unique=True,
     )
     output_file = models.FilePathField(
-        path="test",
-        match="output_file*"
+        path="test_case",
+        match="output_file*",
+        unique=True,
     )
     class Meta:
        verbose_name = "Test"
