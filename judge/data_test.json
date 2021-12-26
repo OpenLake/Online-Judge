@@ -4,6 +4,7 @@
       "pk": 1,
       "fields": {
         "question": "1",
+        "title" : "Test Case 1",
         "input_file": "test/input_file_1",
         "output_file": "test/output_file_1"
       }
@@ -13,8 +14,19 @@
         "pk": 2,
         "fields": {
             "question": "1",
+            "title" : "Test Case 2",
             "input_file": "test/input_file_1_2",
             "output_file": "test/output_file_1_2"
+        }
+    },
+    {
+        "model": "question.Test",
+        "pk": 3,
+        "fields": {
+            "question": "2",
+            "title" : "Test Case 1",
+            "input_file": "test/input_file_2_1",
+            "output_file": "test/output_file_2_1"
         }
     }
 ]

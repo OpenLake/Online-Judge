@@ -1,6 +1,8 @@
 from django.db import models
 
 class Question(models.Model):
+    title = models.CharField(max_length=250)
+    test_count = models.PositiveIntegerField()
     statement = models.TextField()
     class Meta:
        verbose_name = "Question"
@@ -12,6 +14,7 @@ class Test(models.Model):
         on_delete=models.CASCADE,
         related_name="question",
     )
+    title = models.CharField(max_length=250)
     # input_file_<question_id>_<test_id>
     input_file = models.FilePathField(
         path="test",

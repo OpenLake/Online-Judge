@@ -3,6 +3,8 @@
       "model": "question.Question",
       "pk": 1,
       "fields": {
+        "title": "Subtraction",
+        "test_count": "2",
         "statement": "Given space seperated integers a and b. Print a-b in a new line"
       }
     },
@@ -10,6 +12,8 @@
         "model": "question.Question",
         "pk": 2,
         "fields": {
+          "title" : "Multiplication",
+          "test_count" : "1",
           "statement": "Given space seperated integers a and b. Print a*b in a new line"
         }
       }
