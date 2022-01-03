@@ -39,6 +39,7 @@ urlpatterns = [
         name="schema-swagger-ui",
     ),
     path("api/", include("question.urls")),
+    path("api/", include("submission.urls")),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
