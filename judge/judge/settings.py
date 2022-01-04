@@ -117,6 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CELERY_BROKER_URL = "amqp://localhost"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
