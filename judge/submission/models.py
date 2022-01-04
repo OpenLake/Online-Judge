@@ -1,11 +1,12 @@
 from django.db import models
 from question.models import Question, Test
+from .utils import code_file_name
 # submission : id, code_file_path, created_at, status, question_id
 
 # submission_test : test_id, submission_id, output_file
 class Submission(models.Model):
     code_file = models.FileField(
-        upload_to="code",
+        upload_to=code_file_name,
     )
     created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     status_choices = (
@@ -13,7 +14,8 @@ class Submission(models.Model):
         ("WA", "WA"), 
         ("AC", "AC"), 
         ("procesing", "processing"), 
-        ("queue", "queue")
+        ("queue", "queue"),
+        ("NA", "NA")
         )
     status = models.CharField(
         choices=status_choices, 
@@ -28,6 +30,7 @@ class Submission(models.Model):
     class Meta:
        verbose_name = "Submission"
        verbose_name_plural = "Submissions"
+    
 
 class SubmissionTest(models.Model):
     test = models.ForeignKey(
@@ -44,7 +47,7 @@ class SubmissionTest(models.Model):
         path="submission_test", 
         unique=True,
     )
-    # NA - Not executed
+    # NA - Not executed, runtime error
     status_choices = (
         ("TLE", "TLE"), 
         ("WA", "WA"), 
