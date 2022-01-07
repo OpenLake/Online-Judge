@@ -13,7 +13,7 @@ class Submission(models.Model):
         ("TLE", "TLE"), 
         ("WA", "WA"), 
         ("AC", "AC"), 
-        ("procesing", "processing"), 
+        ("processing", "processing"), 
         ("queue", "queue"),
         ("NA", "NA")
         )
@@ -44,7 +44,8 @@ class SubmissionTest(models.Model):
         related_name="submission_test",
     )
     output_file = models.FilePathField(
-        path="submission_test", 
+        path="submission_test",
+        null = True,
         unique=True,
     )
     # NA - Not executed, runtime error
