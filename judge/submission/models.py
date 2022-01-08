@@ -5,7 +5,9 @@ from .utils import code_file_name
 
 # submission_test : test_id, submission_id, output_file
 class Submission(models.Model):
-    code_file = models.TextField()
+    code_file = models.FileField(
+        upload_to=code_file_name,
+    )
     created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     status_choices = (
         ("TLE", "TLE"),
@@ -41,7 +43,7 @@ class SubmissionTest(models.Model):
         on_delete=models.CASCADE,
         related_name="submission_test",
     )
-    output_file = models.TextField(null=True, blank=True)
+    output = models.TextField(null=True, blank=True)
     # NA - Not executed, runtime error
     status_choices = (
         ("TLE", "TLE"), 
