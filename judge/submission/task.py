@@ -41,4 +41,5 @@ def queue_submission(submission_id):
     except Exception as e:
         error = str(e)
         print("run time error")
+        print(error)
         return error
