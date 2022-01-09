@@ -8,7 +8,7 @@ from rest_framework.generics import (
     DestroyAPIView,
 )
 from .serializers import (
-    QuestionSerializer,
+    QuestionListSerializer,
 )
 from .models import Question
 
@@ -19,5 +19,5 @@ class QuestionListAPI(ListAPIView):
         Service usage and description : This API is used to list all the questions.
     """
 
-    serializer_class = QuestionSerializer
+    serializer_class = QuestionListSerializer
     queryset = Question.objects.all()

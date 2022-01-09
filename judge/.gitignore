@@ -2,3 +2,4 @@
 .idea
 *.pyc
 judge/__pycache__/*
+code/*

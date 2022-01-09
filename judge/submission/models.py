@@ -10,12 +10,12 @@ class Submission(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     status_choices = (
-        ("TLE", "TLE"), 
-        ("WA", "WA"), 
+        ("TLE", "TLE"),
+        ("WA", "WA"),
         ("AC", "AC"), 
-        ("procesing", "processing"), 
+        ("processing", "processing"), 
         ("queue", "queue"),
-        ("NA", "NA")
+        ("NotExecuted", "NotExecuted")
         )
     status = models.CharField(
         choices=status_choices, 
@@ -43,10 +43,7 @@ class SubmissionTest(models.Model):
         on_delete=models.CASCADE,
         related_name="submission_test",
     )
-    output_file = models.FilePathField(
-        path="submission_test", 
-        unique=True,
-    )
+    output = models.TextField(null=True, blank=True)
     # NA - Not executed, runtime error
     status_choices = (
         ("TLE", "TLE"), 

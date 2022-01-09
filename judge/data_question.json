@@ -4,8 +4,7 @@
       "pk": 1,
       "fields": {
         "title": "Subtraction",
-        "test_count": "2",
-        "statement": "Given space seperated integers a and b. Print a-b in a new line"
+        "content": "Given integer a and b passed to function submit, return a - b."
       }
     },
     {
@@ -13,8 +12,7 @@
         "pk": 2,
         "fields": {
           "title" : "Multiplication",
-          "test_count" : "1",
-          "statement": "Given space seperated integers a and b. Print a*b in a new line"
+          "content": "Given integers a and b passed to function submit, return a*b"
         }
       }
     
